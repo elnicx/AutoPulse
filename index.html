@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoPulse - Sport Car Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AutoPulse.</h1>
+    <nav>
+      <ul>
+        <li><a href="#" data-region="asia">JDM</a></li>
+        <li><a href="#" data-region="europe">Europe</a></li>
+        <li><a href="#" data-region="america">America</a></li>
+      </ul>
+    </nav>
+    <div class="quote">
+      <p>“Speed meets style – pick your passion.”</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- Car list -->
+    <section class="car-selection">
+      <div id="car-list" class="car-list">
+        <p class="placeholder">Select a category to see cars.</p>
+      </div>
+    </section>
+
+    <!-- Car details -->
+    <section class="car-details">
+      <img id="car-image" src="" alt="" />
+      <div id="car-gallery" class="car-gallery"></div>
+
+      <h2 id="car-name">Select a car to view details</h2>
+      <ul id="car-specs"></ul>
+
+      <!-- Random suggestion -->
+      <div id="suggestion" class="suggestion hidden">
+        <h3>You may also like</h3>
+        <div class="suggest-card" id="suggest-card"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Leaderboard -->
+  <section class="leaderboard">
+    <h2>🏆 Car Leaderboard</h2>
+    <p>Vote your favorite car! See what others picked.</p>
+    <div id="vote-area"></div>
+    <ul id="leaderboard-list"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AutoPulse. Enjoy the ride.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
