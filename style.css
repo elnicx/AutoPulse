@@ -1,0 +1,138 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+/* Header */
+header {
+  background: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h1 { font-size: 2rem; color: #00ffff; }
+
+nav ul { display: flex; list-style: none; padding: 0; gap: 1.5rem; }
+nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+nav a:hover { color: #00ffff; }
+
+.quote { width: 100%; text-align: center; margin-top: 0.5rem; color: #aaa; font-style: italic; }
+
+/* Layout */
+main { display: flex; padding: 2rem; gap: 2rem; }
+.car-selection { width: 30%; }
+.car-details {
+  width: 70%;
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: opacity .4s ease, transform .4s ease;
+}
+
+/* Cards */
+.car-card {
+  background-color: #1c1c1c;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  animation: listIn .35s forwards;
+  opacity: 0;
+  transform: translateX(-16px);
+}
+.car-card:hover { background-color: #222; box-shadow: 0 0 15px #00ffff; transform: scale(1.03); }
+@keyframes listIn { to { opacity:1; transform: translateX(0);} }
+
+/* Category banner */
+.category-banner {
+  width: 100%;
+  background: #111;
+  color: #00ffff;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Details */
+.car-details img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(0,255,255,.25);
+  transition: opacity .35s ease;
+}
+
+/* Gallery */
+.car-gallery {
+  display: flex;
+  gap: .6rem;
+  margin: .9rem 0 1rem;
+  flex-wrap: wrap;
+}
+.car-gallery img {
+  width: 78px; height: 54px; object-fit: cover;
+  border-radius: 6px; cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.car-gallery img:hover { transform: scale(1.07); box-shadow: 0 0 10px #00ffff; }
+.car-gallery img.active { border-color: #00ffff; }
+
+/* Specs */
+#car-specs { list-style: none; padding: 0; margin-top: 1rem; }
+#car-specs li { padding: .5rem 0; border-bottom: 1px solid #333; }
+
+/* Suggestion */
+.suggestion { margin-top: 1.2rem; background: #151515; padding: 1rem; border-radius: 10px; }
+.suggestion.hidden { display: none; }
+.suggest-card {
+  display:flex; gap: .8rem; align-items:center; cursor:pointer;
+  background:#1c1c1c; padding:.7rem; border-radius:10px; transition: transform .2s ease, box-shadow .2s ease;
+}
+.suggest-card:hover { transform: translateY(-2px); box-shadow: 0 0 12px #00ffff; }
+.suggest-card img { width: 96px; height: 64px; object-fit: cover; border-radius: 8px; }
+
+/* Leaderboard */
+.leaderboard {
+  margin: 2rem;
+  background: #151515;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,255,255,0.25);
+}
+.leaderboard h2 { color: #00ffff; }
+#vote-area { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; }
+.vote-btn {
+  background: #1c1c1c;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.vote-btn:hover { background: #00ffff; color: #000; transform: scale(1.05); }
+
+#leaderboard-list { list-style: none; padding: 0; margin: 0; }
+#leaderboard-list li { padding: .4rem 0; border-bottom: 1px solid #333; }
+
+/* Footer */
+footer {
+  background: #111; text-align: center; padding: 1rem; font-size: .9rem; color: #888;
+  position: relative; overflow: hidden;
+}
+footer::before {
+  content: ""; position: absolute; top: 0; left: -50%; width: 200%; height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: shine 5s infinite linear;
+}
+@keyframes shine { from { left: -50%; } to { left: 100%; } }
